@@ -31,6 +31,19 @@ namespace Progetto_Sudoku
                 Console.WriteLine();
             }
         }
-        
+        public static bool AggiungiNumero(int numero, int riga, int colonna, int[,] matrice)
+        {
+            if (matrice[riga, colonna] != 0)
+            {
+                Console.WriteLine("Esiste già un numero in questa posizione");
+                return false; 
+            }
+            matrice[riga, colonna] = numero;
+            Console.SetCursorPosition(colonna * 2, riga);
+            Console.Write(numero + " ");
+            Console.SetCursorPosition(0, 11);
+            Console.WriteLine("Numero Inserito!");
+            return true;
+        }
     }
 }
