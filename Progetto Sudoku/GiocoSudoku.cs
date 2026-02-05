@@ -27,17 +27,45 @@ namespace Progetto_Sudoku
                 if (scelta == 1)
                 {
                     Console.WriteLine("Hai scelto aggiungi numero");
-
+                    Console.WriteLine("Scegli la riga");
+                    int riga; 
+                    int.TryParse(Console.ReadLine(), out riga);
+                    Console.WriteLine("Scegli la colonna");
+                    int colonna;
+                    int.TryParse(Console.ReadLine(), out colonna);
+                    Console.WriteLine("Scegli il numero tra 1 e 9");
+                    int numero;
+                    int.TryParse(Console.ReadLine(), out numero);
 
                 }
                 else if (scelta == 2)
                 {
                     Console.WriteLine("Hai scelto modifica numero");
+                    Console.WriteLine("Scegli la riga");
+                    int riga;
+                    int.TryParse(Console.ReadLine(), out riga);
+                    Console.WriteLine("Scegli la colonna");
+                    int colonna;
+                    int.TryParse(Console.ReadLine(), out colonna);
+                    Console.WriteLine("Scegli il numero tra 1 e 9");
+                    int numero;
+                    int.TryParse(Console.ReadLine(), out numero);
+
                 }
 
                 else if (scelta == 3)
                 {
                     Console.WriteLine("Hai scelto controlla numemro");
+                    Console.WriteLine("Scegli la riga");
+                    int riga;
+                    int.TryParse(Console.ReadLine(), out riga);
+                    Console.WriteLine("Scegli la colonna");
+                    int colonna;
+                    int.TryParse(Console.ReadLine(), out colonna);
+                    Console.WriteLine("Scegli il numero tra 1 e 9");
+                    
+
+
                 }
                 else if (scelta == 4)
                 {
