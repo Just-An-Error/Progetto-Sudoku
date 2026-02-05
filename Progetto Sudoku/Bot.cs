@@ -8,7 +8,9 @@ namespace Progetto_Sudoku {
 
         public static void Main(string[] args) {
 
-            int[,] matriceModifiiabile = Matrice.matrice;
+            int[,] matriceModifiicabile = Matrice.matrice;
+
+            Console.WriteLine($"Valore di ritorno: {Controllo(7, 0, 2, matriceModifiicabile)}");
         }
 
         // Marco
