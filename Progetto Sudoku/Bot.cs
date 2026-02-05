@@ -10,6 +10,7 @@ namespace Progetto_Sudoku {
 
             int[,] matriceModifiicabile = Matrice.matrice;
 
+            Console.WriteLine("Modifica Shehan");
             Console.WriteLine($"Valore di ritorno: {Controllo(7, 0, 2, matriceModifiicabile)}");
         }
 
