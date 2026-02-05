@@ -4,15 +4,14 @@ using System.Text;
 
 namespace Progetto_Sudoku
 {
-    internal class GiocoSudoku
+    public class GiocoSudoku
 
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             bool avvio = true;
             while (avvio)
             {
-                int[,] matriceModificabile = Matrice.matrice;
                 Console.WriteLine("Ciao, benvenuto nel sudoku, aggiungi numero, modifica numero, controlla numero, esci");
                 Console.WriteLine("1. Aggiungi numero");
                 Console.WriteLine("2. Modifica numero");
