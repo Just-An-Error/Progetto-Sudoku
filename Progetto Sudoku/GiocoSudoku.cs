@@ -9,6 +9,9 @@ namespace Progetto_Sudoku
     {
         public static void Main(string[] args)
         {
+            int[,] matriceModificabile = Matrice.matrice;
+
+
             bool avvio = true;
             while (avvio)
             {
