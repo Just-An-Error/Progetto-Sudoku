@@ -55,7 +55,7 @@ namespace Progetto_Sudoku {
         }
 
         // Alessio
-        public bool ControlloBlocchi(int[,] matrice, int riga, int col) {
+        public bool ControlloBlocchi(int valoreBot, int riga, int col, int[,] matrice) {
 
             int[] coordinateCol = new int[3];
             int[] coordinateRiga = new int[3];
@@ -128,8 +128,6 @@ namespace Progetto_Sudoku {
                 }
             };
 
-            int valoreBot = matrice[riga, col];
-
             // Controllo vero e proprio
             for (int y = 0; y < 4; y += 1) {
 
@@ -143,6 +141,11 @@ namespace Progetto_Sudoku {
 
             // Nel caso non entra nella condizione del false, restituirà che nel blocco è giusto
             return true;
+        }
+
+        public bool Controllo(int valoreBot, int[,] matrice, int riga, int col) {
+
+            return ControlloRighe(valoreBot, riga, matrice) && ControlloColonne(valoreBot, col, matrice) && ControlloBlocchi(valoreBot, riga, col, matrice); 
         }
     }
 }
