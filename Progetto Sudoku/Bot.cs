@@ -25,7 +25,7 @@ namespace Progetto_Sudoku {
                 {
                     for (int numero = 1; numero < 9; numero++) 
                     {
-                        if (Controllo && matriceModificabile[riga, col] == Matrice.matrice[riga,col] && matriceModificabile[riga,col] == 0)
+                        if (Controllo(n,i,j,matriceModificabile) && matriceModificabile[riga, col] == Matrice.matrice[riga,col] && matriceModificabile[riga,col] == 0)
                         {
                             matriceModificabile[riga, col] = n;
                         }
