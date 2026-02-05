@@ -16,7 +16,7 @@ namespace Progetto_Sudoku {
 
         // Shehan
         
-        public bool ControlloRighe(int n, int riga, int[,] matrice) 
+        public static bool ControlloRighe(int n, int riga, int[,] matrice) 
         {
             if (n >= 1 && n <= 9)
             {
@@ -35,7 +35,7 @@ namespace Progetto_Sudoku {
             }
         }
 
-        public bool ControlloColonne(int n, int col, int[,] matrice) 
+        public static bool ControlloColonne(int n, int col, int[,] matrice) 
         {
             if (n >= 1 && n <= 9)
             {
@@ -55,7 +55,7 @@ namespace Progetto_Sudoku {
         }
 
         // Alessio
-        public bool ControlloBlocchi(int valoreBot, int riga, int col, int[,] matrice) {
+        public static bool ControlloBlocchi(int valoreBot, int riga, int col, int[,] matrice) {
 
             int[] coordinateCol = new int[3];
             int[] coordinateRiga = new int[3];
@@ -129,9 +129,9 @@ namespace Progetto_Sudoku {
             };
 
             // Controllo vero e proprio
-            for (int y = 0; y < 4; y += 1) {
+            for (int y = 0; y < 3; y += 1) {
 
-                for (int x = 0; x < 4; x += 1) {
+                for (int x = 0; x < 3; x += 1) {
 
                     // se vengono trovati due numeri uguali OLTRE al numero nella stessa posizione, vuoldire che ci sono due duplicati, restituirà false
                     if (bloccoTemporaneo[y, x] == valoreBot /*&& y != riga && x != col*/)
@@ -143,7 +143,7 @@ namespace Progetto_Sudoku {
             return true;
         }
 
-        public bool Controllo(int valoreBot, int[,] matrice, int riga, int col) {
+        public static bool Controllo(int valoreBot, int riga, int col, int[,] matrice) {
 
             return ControlloRighe(valoreBot, riga, matrice) && ControlloColonne(valoreBot, col, matrice) && ControlloBlocchi(valoreBot, riga, col, matrice); 
         }
